@@ -19,6 +19,9 @@ object MapOperateDemo02 {
     val list2 = list.map(multiple)
     println("list2=" + list2) //List(6,10,14)
 
+    val list3 = list.map(multiple2)
+    println("list3=" + list3) //List(6,10,14)
+
 
     //深刻理解map映射函数的机制-模拟实现
 
@@ -31,6 +34,11 @@ object MapOperateDemo02 {
   def multiple(n:Int): Int = {
     println("multiple 被调用~~")
     2 * n
+  }
+
+  def multiple2(n:Int):Int = {
+    println("multiple 被调用~~")
+    return 2 * n
   }
 }
 
@@ -46,9 +54,9 @@ class MyList {
     //遍历集合
     for (item <- this.list1) {
       //如果item是一个集合
-      if (f(item) == true) {
-        list2 = list2 :+ item
-      }
+//      if (f(item) == true) {
+        list2 = list2 :+ item*2
+//      }
 
     }
     list2

@@ -20,6 +20,14 @@ object MatchObjectDemo2 {
       case _ => println("nothing matched")
     }
 
+
+    //todo seq 数据
+
+    val aa =Seq(3,"3R4",45,"34",4.6, Names)
+
+    for(row <- aa ){
+        println(row)
+    }
   }
 }
 
